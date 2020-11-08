@@ -16,7 +16,7 @@ deploy:
   provider: elasticbeanstalk
   region: "ap-southeast-2"
   app: "Malith-Docker"
-  env: "MalithDocker-env"
+  env: "MalithDocker-env-1"
   bucket_name: "elasticbeanstalk-ap-southeast-2-699799608914"
   bucket_path: "Malith-Docker"
   on:
