@@ -11,3 +11,15 @@ before_install:
  
 script:
     - docker run -e CI=true malith/docker-react npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-southeast-2"
+  app: "Malith-Docker"
+  env: "MalithDocker-env"
+  bucket_name: "elasticbeanstalk-ap-southeast-2-699799608914"
+  bucket_path: "Malith-Docker"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
